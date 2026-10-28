@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Orc Siege is a turn based tower defense game, built using ASCII graphics. Play Orc Siege Classic in your browser.">
+    <title>Orc Siege — ASCII tower defense</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="./" aria-label="Orc Siege home"><span class="mark" aria-hidden="true">N</span> ORC SIEGE</a>
+        <nav aria-label="Main navigation">
+          <a href="https://classic.orcsiege.com/">Classic <span aria-hidden="true">↗</span></a>
+          <a href="./blog/">Blog</a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <div class="page-label"><span>TURN BASED / TOWER DEFENSE</span><span>ASCII GRAPHICS</span></div>
+        <section class="hero" aria-labelledby="game-title">
+          <div class="hero-copy">
+            <p class="eyebrow">THE ORCS ARE COMING.</p>
+            <h1 id="game-title">ORC<br>SIEGE<span class="title-dot">.</span></h1>
+            <p class="description">Orc Siege is a turn based tower defense game, built using ASCII graphics.</p>
+            <a class="button" href="https://classic.orcsiege.com/">Play Classic <span aria-hidden="true">↗</span></a>
+            <p class="play-note">In your browser. Keyboard + mouse.</p>
+          </div>
+
+          <figure class="battlefield">
+            <div class="panel-heading" aria-hidden="true"><span>DEFEND THE NEXUS</span><span>[ N ]</span></div>
+            <pre class="ascii-map" aria-hidden="true">.............................
+..<span class="orc">O</span>.......................<span class="orc">O</span>..
+.............................
+.......<span class="orc">O</span>.....................
+.............................
+.............<span class="wall">WWW</span>.............
+.........<span class="turret">T</span>...<span class="wall">W</span><span class="nexus">N</span><span class="wall">W</span>...<span class="turret">T</span>.........
+.............<span class="wall">W</span>.<span class="wall">W</span>.............
+.............................
+.....................<span class="orc">O</span>.......
+.............................
+....<span class="orc">O</span>........................
+.............................</pre>
+            <figcaption class="map-legend">
+              <span><b class="nexus">N</b> Nexus</span>
+              <span><b class="turret">T</b> Turret</span>
+              <span><b class="wall">W</b> Wall</span>
+              <span><b class="orc">O</b> Orc</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="field-guide" aria-label="The game in three steps">
+          <div><span class="step-number">01</span><h2>BUILD.</h2><p>Place walls and turrets.</p></div>
+          <div><span class="step-number">02</span><h2>ADVANCE.</h2><p>Take it one turn at a time.</p></div>
+          <div><span class="step-number">03</span><h2>SURVIVE.</h2><p>Keep the nexus standing.</p></div>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>ORC SIEGE / ONE TURN AT A TIME.</span><a href="./blog/">Read the blog <span aria-hidden="true">→</span></a></footer>
+    </div>
+  </body>
+</html>
