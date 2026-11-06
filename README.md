@@ -3,9 +3,10 @@
 Static homepage and blog placeholder for **www.orcsiege.com**. The playable game
 is a separate Flask application at **classic.orcsiege.com**.
 
-The design follows Classic's black background, orange links, ASCII graphics, and
-simple bordered panels. There are no JavaScript dependencies, external fonts,
-analytics, or build tools.
+The design is a plain, single-column, Web 1.0-style journal: Classic's black
+background and orange links, monospace text, modest headings, and horizontal
+rules. There is no hero graphic, demo illustration, or screenshot placeholder.
+There are no JavaScript dependencies, external fonts, analytics, or build tools.
 
 ## Files
 
