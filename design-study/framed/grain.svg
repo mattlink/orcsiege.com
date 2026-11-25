@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 60" preserveAspectRatio="none">
+  <defs>
+    <filter id="fibers" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".015 .38" numOctaves="3" seed="12" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="480" height="60" filter="url(#fibers)" opacity=".65"/>
+  <g fill="none" stroke="#1d130f" stroke-width=".8" opacity=".52">
+    <path d="M0 9c45 3 74-7 134-4s81 10 141 7 158-6 205-3M0 17c50 2 98-8 153-4s72 10 133 6 142-5 194-2M0 23c76 4 87-15 165-6 26 3 63 9 111 8s142-6 204-2M0 30c58 2 79-14 124-10 31 3 50 12 93 13 94 2 174-10 263-3M0 41c61 1 99-14 142-10 48 4 52 12 106 10 117-4 158-11 232 0M0 49c53 0 80-7 115-10 58-4 68 13 134 11 79-2 135-10 231-1M0 55c72 1 93-12 151-8s64 13 145 6 115-1 184 2"/>
+    <path d="M87 29c24-3 29-9 51-5s23 7 54 11c-33 2-44-4-59-5-14-2-24 2-46-1Z"/>
+  </g>
+  <path d="M0 26c60 1 79-9 114-8m140 31c83-2 147-12 226-5" fill="none" stroke="#ffe0a8" opacity=".22"/>
+</svg>

@@ -1,47 +1,30 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Orc Siege is a turn based tower defense game, built using ASCII graphics. Play the game and read the blog.">
-    <title>Orc Siege</title>
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="site-shell">
-      <header class="site-header">
-        <h1 class="site-title">Orc Siege</h1>
-        <p class="site-description">A small game about holding out against the orcs.</p>
-        <nav aria-label="Main navigation">
-          <ul>
-            <li><a href="./" aria-current="page">Home</a></li>
-            <li><a href="https://classic.orcsiege.com/">Play Classic</a></li>
-            <li><a href="./blog/">Blog</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <main id="main">
-        <article aria-labelledby="classic-title">
-          <h2 id="classic-title">Orc Siege Classic</h2>
-          <p>Orc Siege is a turn based tower defense game, built using ASCII graphics.</p>
-          <p>Build walls and turrets to defend your nexus from the orcs. Take it one turn at a time, and survive as long as you can.</p>
-          <p><a href="https://classic.orcsiege.com/">Play Orc Siege Classic</a></p>
-          <p class="small-print">You'll need a desktop browser, a keyboard, and a mouse.</p>
-        </article>
-
-        <section aria-labelledby="blog-title">
-          <h2 id="blog-title">Blog</h2>
-          <p>No posts yet. The <a href="./blog/">blog</a> is under construction.</p>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <p>Orc Siege / <a href="https://github.com/mattlink/orcsiege.com">Website source</a></p>
-      </footer>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#242424">
+  <meta name="description" content="Orc Siege is a turn-based tower defense game built with ASCII graphics. Play Orc Siege Classic or learn about the project.">
+  <title>Orc Siege</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/fonts.css">
+  <link rel="stylesheet" href="./assets/title.css">
+  <link rel="stylesheet" href="./assets/landing.css?v=center-stack">
+  <script type="module" src="./assets/title-motion.js"></script>
+</head>
+<body>
+  <main class="scene landing" data-site data-layout="08">
+    <div class="site-grid">
+      <div class="frame" role="group" aria-labelledby="game-title" aria-describedby="motion-help" tabindex="0">
+        <h1 class="title" id="game-title"><span>Orc</span> <span>Siege</span></h1>
+        <div class="playfield"><div class="letter-layer" hidden></div></div>
+      </div>
+      <nav class="site-nav" aria-label="Orc Siege">
+        <a href="https://classic.orcsiege.com/">Orc Siege Classic</a>
+        <a href="./about/">About</a>
+      </nav>
     </div>
-  </body>
+    <p class="sr-only" id="motion-help">Move or tap near the title to wake the letters. To play by keyboard, press Space or Enter here, then Tab to a loose letter and use the arrow keys. Escape recalls the title. Press P while the title area is focused to pause or resume motion.</p>
+  </main>
+</body>
 </html>

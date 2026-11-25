@@ -1,0 +1,63 @@
+/* The landing page itself: two text links, a wordmark, and a flat field. */
+.landing {
+  --back: #242424;
+  --ink: #bc5429;
+  --size: 52px;
+  --inset: 160px;
+  --gap: 18px;
+  /* Give the group room to move inward on desktop without crowding phones. */
+  --edge: min(var(--inset), max(9cqw, calc(25cqw - 96px)), 35svh);
+  --link-gap: min(var(--gap), 7cqw);
+  --title-cap: 21cqw;
+  min-height: max(265px, 100svh);
+  container-type: inline-size;
+}
+.site-grid {
+  display: grid;
+  min-height: inherit;
+  padding: var(--edge);
+  gap: var(--link-gap);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto auto;
+}
+.landing .frame {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: start;
+  align-self: start;
+  width: max-content;
+  height: auto;
+  z-index: 1;
+}
+.landing .title {
+  position: relative;
+  inset: auto;
+  font-size: min(var(--size), var(--title-cap));
+}
+.landing .playfield { inset: auto; }
+.landing .frame:focus-visible:not([data-pointer-focus]) { outline-offset: 4px; }
+.site-nav {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  justify-self: start;
+  align-self: start;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: min(8px, var(--link-gap)) var(--link-gap);
+  min-width: 0;
+  color: #d0d0d0;
+  font: 400 clamp(12px, 3.6cqw, 14px)/1.5 'IBM Plex Mono', monospace;
+  pointer-events: none;
+}
+.site-nav :is(a, .mock-link) { color: inherit; text-decoration: underline; text-underline-offset: .2em; pointer-events: auto; }
+.site-nav a:hover { color: #fff; }
+.site-nav a:focus-visible { outline: 1px solid #e6aa8b; outline-offset: 4px; }
+
+/* Center the whole title-and-links group, not just the title. */
+.landing[data-layout='08'] { --inset: 24px; --edge: min(var(--inset), 9cqw); }
+.landing[data-layout='08'] .site-grid { grid-template-rows: minmax(0, 1fr) auto auto minmax(0, 1fr); }
+.landing[data-layout='08'] .frame { justify-self: center; }
+.landing[data-layout='08'] .site-nav { justify-self: center; justify-content: center; }

@@ -1,0 +1,71 @@
+:root { color-scheme: dark; background: #090909; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+.scene {
+  --back: #090909;
+  --ink: #bc5429;
+  --inset: clamp(16px, 4vw, 24px);
+  position: relative;
+  min-height: max(260px, 100svh);
+  isolation: isolate;
+  background: var(--back);
+  color: var(--ink);
+}
+/* A stable hit area, not a visual container. The whole page is one flat color. */
+.frame {
+  position: relative;
+  width: min(100%, 460px);
+  height: min(220px, 78svh);
+  outline: none;
+}
+.frame:focus-visible:not([data-pointer-focus]) { outline: 1px dashed #b4b4b4; outline-offset: -3px; }
+.playfield { position: absolute; inset: 0; overflow: hidden; }
+.title {
+  position: absolute;
+  margin: 0;
+  top: var(--inset);
+  left: var(--inset);
+  white-space: nowrap;
+  font: 400 clamp(38px, 10vw, 52px)/1 'Jacquard 12', Georgia, serif;
+  pointer-events: none;
+  user-select: none;
+}
+.title span { display: inline-block; }
+.frame[data-motion='moving'] .title { opacity: 0; }
+.letter-layer { position: absolute; inset: 0; pointer-events: none; }
+.title-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: grab;
+  touch-action: none;
+  pointer-events: auto;
+  isolation: isolate;
+  font: 400 1em/1 'Jacquard 12', Georgia, serif;
+}
+.title-letter[data-grabbed='true'] { cursor: grabbing; }
+.title-letter:focus-visible { outline: 1px dashed #b4b4b4; }
+.title-letter span { position: absolute; inset: 50% auto auto 50%; translate: -50% -50%; pointer-events: none; white-space: pre; }
+/* Add the weighted masks only within one glyph, so overlap stays the ink
+   color instead of dimming into the page halfway through the crossfade. */
+.title-letter .bastarda { font: 400 .8333em/1 'Jacquarda Bastarda 9', Georgia, serif; mix-blend-mode: plus-lighter; }
+.scene-tools {
+  position: absolute;
+  bottom: max(8px, env(safe-area-inset-bottom));
+  inset-inline: var(--inset);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  color: #b1b1b1;
+  font: 400 11px/1.5 'IBM Plex Mono', monospace;
+}
+.scene-tools :is(button, a) { background: none; border: 0; padding: 8px 0; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+.scene-tools :is(button, a):hover { color: #eee; }
+.scene-tools button:disabled { color: #999; text-decoration: none; cursor: default; }
+.scene-tools :focus-visible { outline: 1px solid #b4b4b4; outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

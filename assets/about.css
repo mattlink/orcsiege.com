@@ -1,0 +1,11 @@
+/* Match the original design study's About page. */
+.landing-copy {
+  --back: #242424;
+  --ink: #bc5429;
+  padding: 24px;
+  color: #d0d0d0;
+  font: 400 14px/1.6 'IBM Plex Mono', monospace;
+}
+.landing-copy h1 { margin: 0 0 1em; color: var(--ink); font: 400 52px/1 'Jacquard 12', Georgia, serif; }
+.landing-copy p { max-width: 60ch; }
+.landing-copy a { color: inherit; text-underline-offset: .2em; }

@@ -1,0 +1,31 @@
+@import url('../assets/landing.css?v=center-stack');
+
+/* Center stack and Low left share their placement rules with the homepage. */
+.landing:where(:not([data-layout='08'], [data-layout='10'])) { --inset: 24px; --edge: min(var(--inset), 9cqw); }
+.landing:where(:not([data-layout='08'], [data-layout='10'])) .site-grid { grid-template-rows: auto minmax(0, 1fr) auto; }
+.landing:where(:not([data-layout='08'], [data-layout='10'])) .frame { grid-row: 1; }
+
+/* 02 and 03 share the header row, but one is port-side and stacked. */
+.landing:is([data-layout='02'], [data-layout='03']) { --title-cap: 13cqw; }
+.landing:is([data-layout='02'], [data-layout='03']) .site-grid { grid-template-columns: max-content minmax(0, 1fr); }
+.landing:is([data-layout='02'], [data-layout='03']) .frame { grid-column: 1; }
+.landing:is([data-layout='02'], [data-layout='03']) .site-nav { grid-column: 2; grid-row: 1; }
+.landing[data-layout='03'] .site-nav { justify-self: end; justify-content: flex-end; text-align: end; }
+
+.landing:is([data-layout='02'], [data-layout='04'], [data-layout='05'], [data-layout='07'], [data-layout='11']) .site-nav {
+  flex-direction: column;
+  gap: var(--link-gap);
+}
+.landing[data-layout='04'] .site-grid { grid-template-rows: auto auto minmax(0, 1fr); }
+.landing[data-layout='04'] .site-nav { grid-row: 2; }
+.landing[data-layout='05'] .site-nav { grid-column: 2; grid-row: 2; justify-self: end; align-self: center; }
+.landing[data-layout='06'] .site-nav { justify-self: end; justify-content: flex-end; }
+.landing[data-layout='07'] .frame { justify-self: end; }
+.landing:is([data-layout='09'], [data-layout='12']) .frame { justify-self: center; }
+.landing[data-layout='09'] .site-nav { justify-self: center; justify-content: center; }
+.landing[data-layout='11'] { --title-cap: 13cqw; }
+.landing[data-layout='11'] .site-grid { grid-template-columns: max-content minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr); }
+.landing[data-layout='11'] .frame { grid-column: 1; grid-row: 2; align-self: center; }
+.landing[data-layout='11'] .site-nav { grid-column: 2; grid-row: 2; justify-self: end; align-self: center; }
+.landing[data-layout='12'] .frame { grid-row: 2; align-self: center; }
+.landing[data-layout='12'] .site-nav { justify-self: stretch; justify-content: space-between; }

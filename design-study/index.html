@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Orc Siege / Layout study</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/title.css">
+  <link rel="stylesheet" href="./layout.css?v=center-stack">
+  <link rel="stylesheet" href="./workbench.css">
+  <script type="module" src="./workbench.js?v=center-stack"></script>
+</head>
+<body class="workbench">
+  <main class="bench">
+    <header class="bench-header">
+      <p class="label">ORC SIEGE / STUDY 03</p>
+      <h1>Title &amp; links.</h1>
+      <p>Twelve placements for the same small page. The current trial is Center stack (08) in rust on charcoal (05).</p>
+    </header>
+    <section id="preview" aria-labelledby="preview-title">
+      <div class="bench-bar">
+        <h2 id="preview-title">Live preview</h2>
+        <label for="viewport">Viewport</label>
+        <select id="viewport"><option value="wide">Wide</option><option value="narrow">Mobile · 390px</option></select>
+        <a id="open" href="./study.html">Full screen ↗</a>
+      </div>
+      <nav id="options" aria-label="Choose a layout"></nav>
+      <div class="screen-wrap"><iframe id="screen" title="Orc Siege layout preview" hidden></iframe></div>
+      <p id="caption" aria-live="polite"></p>
+      <noscript><p><a href="./study.html">Open the baseline layout</a>. The comparison controls need JavaScript.</p></noscript>
+      <div class="settings" aria-label="Preview settings" role="group" hidden>
+        <label class="palette">Palette <select id="palette"></select></label>
+        <div id="sliders"></div>
+        <button type="button" id="reset">Reset sliders</button>
+        <button type="button" id="pause" aria-pressed="false">Pause motion</button>
+      </div>
+    </section>
+    <section class="comparison" aria-labelledby="compare-title">
+      <h2 id="compare-title">All twelve layouts</h2>
+      <div id="cards" class="cards"></div>
+    </section>
+    <footer class="bench-footer">
+      <a href="../">Website homepage</a>
+      <a href="./colors/">Color study 02</a>
+      <a href="./framed/">Framed study 01</a>
+    </footer>
+  </main>
+</body>
+</html>

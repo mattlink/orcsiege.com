@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#100f10">
+  <title>Orc Siege · Homepage study</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../../assets/fonts.css">
+  <link rel="stylesheet" href="./scene.css">
+  <script type="module" src="../study.js"></script>
+</head>
+<body>
+  <main class="scene full-scene" data-variant="01" data-round="framed">
+    <div class="frame" role="group" aria-labelledby="game-title" aria-describedby="motion-help" tabindex="0">
+      <div class="playfield">
+        <div class="inlay" aria-hidden="true"></div>
+        <h1 class="title" id="game-title"><span>Orc</span> <span>Siege</span></h1>
+        <div class="letter-layer" hidden></div>
+      </div>
+      <div class="hardware" aria-hidden="true">
+        <span class="timber north"></span><span class="timber east"></span><span class="timber south"></span><span class="timber west"></span>
+        <span class="joint nw"></span><span class="joint ne"></span><span class="joint sw"></span><span class="joint se"></span>
+      </div>
+    </div>
+    <p class="sr-only" id="motion-help">Move into the frame to wake the letters. Tap the frame or press Space or Enter to keep them loose. Use the pointer to drag individual letters, or tab to a loose letter and use the arrow keys. Escape recalls the title.</p>
+    <div class="scene-tools" hidden>
+      <button type="button" id="wake" aria-pressed="false">Wake letters</button>
+      <button type="button" id="pause" aria-pressed="false">Pause motion</button>
+      <a id="all-studies" href="./">All studies ↗</a>
+    </div>
+  </main>
+</body>
+</html>
