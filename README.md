@@ -18,7 +18,7 @@ dependencies, remote font requests, analytics, or build tools.
 - `assets/`: local fonts and their OFL licenses, homepage styles, and shared title motion.
 - `design-study/`: playable design archive, including the twelve layouts, palette and spacing controls, color study, and original framed concepts. The homepage doesn't load the archive.
 - `blog/index.html` and `styles.css`: existing blog placeholder and its styling, not linked from the homepage.
-- `favicon.svg`: ASCII-inspired nexus icon.
+- `favicon.svg`: OS favicon drawn from the Jacquard 12 title outlines; the standalone Classic site uses the same mark.
 - `.nojekyll`: publish the files unchanged on GitHub Pages.
 
 ## Preview locally
